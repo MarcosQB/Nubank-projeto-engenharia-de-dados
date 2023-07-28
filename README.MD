@@ -10,7 +10,13 @@
 
 | Serviços | Descrição |
 |----------|-----------|
-|Athena (AWS)| Serviço de análise interativo e sem servidor com suporte a formatos de tabela e arquivo abertos.|
+|![](./Infra/Icons/Athena.png) Athena (AWS)| Serviço de análise interativo e sem servidor com suporte a formatos de tabela e arquivo abertos.|
+|EMR (AWS)|            |
+|Glue Crawlers (AWS)|            |
+|Glue Data Catalog (AWS)|            |
+|SNS (AWS)|            |
+|Step Functions (AWS)|            |
+|S3 (AWS)|            | 
 
 ## Dashboard
 ![](./Dashboard/Layout.jpg)
