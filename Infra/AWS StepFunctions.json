@@ -1,0 +1,166 @@
+{
+  "Comment": "",
+  "StartAt": "Email - Iniciado",
+  "States": {
+    "Email - Iniciado": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:us-east-1:373049988265:Test",
+        "Message": {
+          "Valor": "Iniciado - Nubank"
+        }
+      },
+      "Next": "EMR CreateCluster",
+      "ResultPath": null
+    },
+    "EMR CreateCluster": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:createCluster.sync",
+      "Parameters": {
+        "Name": "StepFunctionEMR",
+        "ServiceRole": "EMR_DefaultRole",
+        "JobFlowRole": "EMR_EC2_DefaultRole",
+        "ReleaseLabel": "emr-6.5.0",
+        "Applications": [
+          {
+            "Name": "Hadoop"
+          },
+          {
+            "Name": "Spark"
+          }
+        ],
+        "LogUri": "s3://aws-logs-373049988265-us-east-1/elasticmapreduce/",
+        "VisibleToAllUsers": true,
+        "Instances": {
+          "InstanceGroups": [
+            {
+              "Name": "Master nodes",
+              "Market": "ON_DEMAND",
+              "InstanceRole": "MASTER",
+              "InstanceType": "c5.xlarge",
+              "InstanceCount": 1
+            },
+            {
+              "Name": "Worker nodes",
+              "Market": "ON_DEMAND",
+              "InstanceRole": "CORE",
+              "InstanceType": "m5.xlarge",
+              "InstanceCount": 2
+            }
+          ],
+          "KeepJobFlowAliveWhenNoSteps": true,
+          "TerminationProtected": false
+        }
+      },
+      "Next": "PutAutoTerminationPolicy"
+    },
+    "PutAutoTerminationPolicy": {
+      "Type": "Task",
+      "Next": "Extract",
+      "Parameters": {
+        "AutoTerminationPolicy": {
+          "IdleTimeout": 7200
+        },
+        "ClusterId.$": "$.ClusterId"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:emr:putAutoTerminationPolicy",
+      "ResultPath": null
+    },
+    "Extract": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+      "Parameters": {
+        "ClusterId.$": "$.ClusterId",
+        "Step": {
+          "Name": "Extract",
+          "ActionOnFailure": "CONTINUE",
+          "HadoopJarStep": {
+            "Jar": "command-runner.jar",
+            "Args": [
+              "spark-submit",
+              "--deploy-mode",
+              "client",
+              "s3://nubank-api-dependencias/Scripts/Extracts-Nubank.py"
+            ]
+          }
+        }
+      },
+      "Next": "Transform",
+      "ResultPath": null
+    },
+    "Transform": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+      "Parameters": {
+        "ClusterId.$": "$.ClusterId",
+        "Step": {
+          "Name": "Transform",
+          "ActionOnFailure": "CONTINUE",
+          "HadoopJarStep": {
+            "Jar": "command-runner.jar",
+            "Args": [
+              "spark-submit",
+              "--deploy-mode",
+              "client",
+              "s3://nubank-api-dependencias/Scripts/Transforme-Load-nubank.py"
+            ]
+          }
+        }
+      },
+      "ResultPath": null,
+      "Next": "StartCrawler"
+    },
+    "StartCrawler": {
+      "Type": "Task",
+      "Next": "Load",
+      "Parameters": {
+        "Name": "nubank-catalog"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:glue:startCrawler",
+      "ResultPath": null
+    },
+    "Load": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+      "Parameters": {
+        "ClusterId.$": "$.ClusterId",
+        "Step": {
+          "Name": "Load",
+          "ActionOnFailure": "CONTINUE",
+          "HadoopJarStep": {
+            "Jar": "command-runner.jar",
+            "Args": [
+              "spark-submit",
+              "--deploy-mode",
+              "client",
+              "s3://nubank-api-dependencias/Scripts/Request-Athena-Nubank.py"
+            ]
+          }
+        }
+      },
+      "ResultPath": null,
+      "Next": "EMR TerminateCluster"
+    },
+    "EMR TerminateCluster": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::elasticmapreduce:terminateCluster.sync",
+      "Parameters": {
+        "ClusterId.$": "$.ClusterId"
+      },
+      "Next": "Email - Concluido",
+      "ResultPath": null
+    },
+    "Email - Concluido": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:us-east-1:373049988265:Test",
+        "Message": {
+          "Valor": "Finalizado - Nubank"
+        }
+      },
+      "End": true
+    }
+  }
+}
