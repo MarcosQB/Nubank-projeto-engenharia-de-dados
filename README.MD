@@ -47,7 +47,7 @@ google-auth-httplib2
 google-auth-oauthlib
 pynubank
 ```
-## Scrips
+## Scripts
 >[Extraindo os dados da Nubank via API](./Scripts/Extraindo_dados_Nubank_API.ipynb)
 
 >[Limpando e transformando os dados](./Scripts/Extraindo_dados_Nubank_API.ipynb)
