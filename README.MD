@@ -2,11 +2,11 @@
 > ###### Autor: Marcos Alexandre
 > ###### Data: Julho 29, 2023
 ### Descrição
-`Este projeto tem como objetivo automatizar a coleta, análise e visualização dos dados da conta Nubank por meio de uma arquitetura de engenharia de dados provisionada na nuvem AWS (Amazon Web Services). A solução oferece uma visão detalhada das transações, despesas, receitas, saldo da conta e limites de crédito, permitindo um gerenciamento financeiro mais eficiente e consciente.`
+>Este projeto tem como objetivo automatizar a coleta, análise e visualização dos dados da conta Nubank por meio de uma arquitetura de engenharia de dados provisionada na nuvem AWS (Amazon Web Services). A solução oferece uma visão detalhada das transações, despesas, receitas, saldo da conta e limites de crédito, permitindo um gerenciamento financeiro mais eficiente e consciente.
 
 #### Fluxo
 
-1. **Coleta de Dados da Conta do Nubank:** 
+>1. **Coleta de Dados da Conta do Nubank:** 
 Através de uma integração com a API do Nubank, os dados financeiros, incluindo transações, saldo da conta, limites de crédito e movimentações, são coletados de forma automatizada e segura.
 
 2. **Armazenamento na Nuvem AWS:** 
