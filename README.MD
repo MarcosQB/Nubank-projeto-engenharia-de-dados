@@ -1,12 +1,12 @@
 # Nubank
 > ###### Autor: Marcos Alexandre
 > ###### Data: Julho 29, 2023
-### Descrição
->Este projeto tem como objetivo automatizar a coleta, análise e visualização dos dados da conta Nubank por meio de uma arquitetura de engenharia de dados provisionada na nuvem AWS (Amazon Web Services). A solução oferece uma visão detalhada das transações, despesas, receitas, saldo da conta e limites de crédito, permitindo um gerenciamento financeiro mais eficiente e consciente.
+## Descrição
+Este projeto tem como objetivo automatizar a coleta, análise e visualização dos dados da conta Nubank por meio de uma arquitetura de engenharia de dados provisionada na nuvem AWS (Amazon Web Services). A solução oferece uma visão detalhada das transações, despesas, receitas, saldo da conta e limites de crédito, permitindo um gerenciamento financeiro mais eficiente e consciente.
 
-#### Fluxo
+## Fluxo 
 
->1. **Coleta de Dados da Conta do Nubank:** 
+1. **Coleta de Dados da Conta do Nubank:** 
 Através de uma integração com a API do Nubank, os dados financeiros, incluindo transações, saldo da conta, limites de crédito e movimentações, são coletados de forma automatizada e segura.
 
 2. **Armazenamento na Nuvem AWS:** 
@@ -26,7 +26,7 @@ Os dados são enviados para o Google Sheets e o Data Studio para uma visualizaç
 7. **Notificações por E-mail:**
  O projeto envia notificações via e-mail para informar o início e conclusão do processamento dos dados, me mantendo informado sobre o status do fluxo de processamento.
 
-#### Benefícios:
+## Ganhos com o projeto:
 
 - **Automatização Financeira:**
  A automatização da coleta e análise de dados me permite ter uma visão completa e atualizada das minhas finanças, eliminando a necessidade de acompanhamento manual e trabalhoso.
@@ -36,7 +36,7 @@ Com os insights detalhados obtidos a partir da análise dos dados, posso tomar d
 
 - **Comparação de Períodos:** 
 O armazenamento dos dados em formato Parquet possibilita a comparação entre diferentes períodos de tempo, permitindo identificar tendências e mudanças no comportamento financeiro ao longo do tempo.
-#### Dependências
+## Dependências
 ```shell
 urllib3==1.26.6
 cryptography==38.0.2
@@ -47,7 +47,10 @@ google-auth-httplib2
 google-auth-oauthlib
 pynubank
 ```
-### Serviços utilizados
+## Arquitetura dos dados
+<img src="./Infra/Arquitetura_Dados.gif" alt="Aqt" width="1200" height="500">
+
+## Serviços utilizados
 
 | Icon| Serviços | Descrição |
 |------|----------|-----------|
@@ -64,10 +67,7 @@ pynubank
 |<img src="./docs/Icons/Google Sheets.png" alt="Sheets" width="50" height="50">|Google Sheets (Google)|Planilha online oferecida pelo Google, permite criar, editar e compartilhar planilhas com outras pessoas em tempo real, facilitando a colaboração e organização de dados.|
 |<img src="./docs/Icons/DataStudio.png" alt="DataStudio" width="50" height="50">|DataStudio (Google)|Ferramenta de visualização de dados que permite criar relatórios interativos e painéis informativos usando várias fontes de dados.Facilita a criação de gráficos e dashboards personalizados para análise e tomada de decisões.|
 
-### Arquitetura dos dados
-<img src="./Infra/Arquitetura_Dados.gif" alt="Aqt" width="1200" height="500">
-
-### Dashboard Construido
+## Dashboard Construido
 ![](./Dashboard/Layout.jpg)
 
 
