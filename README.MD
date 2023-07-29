@@ -40,7 +40,7 @@ O armazenamento dos dados em formato Parquet possibilita a comparação entre di
 ## Dashboard
 - <a href="https://lookerstudio.google.com/reporting/10caac1c-251e-4a69-92ba-cd85e57aa33c" target="_blank">Visualizar no DataStudio</a>
 
-> ###### Os dados apresentados no Dashboad são fictício
+> ###### Os dados apresentados no Dashboad são fictícios
 ![](./docs/Imgs/Relatório_Nubank_Dados_Ficticios.jpg)
 
 ## Arquitetura dos dados
