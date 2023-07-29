@@ -52,7 +52,10 @@ O armazenamento dos dados em formato Parquet possibilita a comparação entre di
 - [Detalhe sobre os serviços utilizados](./Scripts/Coletando_dados_Athena_enviando_Google_Sheets.ipynb)
 
 ## Dashboard Construido
-- [Visualizar no DataStudio](https://lookerstudio.google.com/reporting/10caac1c-251e-4a69-92ba-cd85e57aa33c)
+- <a href="https://lookerstudio.google.com/reporting/10caac1c-251e-4a69-92ba-cd85e57aa33c" target="_blank">Visualizar no DataStudio</a>
+
+
+
 
 ![](./docs/Imgs/Relatório_Nubank_Dados_Ficticios.jpg)
 
