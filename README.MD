@@ -65,7 +65,7 @@ pynubank
 |<img src="./docs/Icons/DataStudio.png" alt="DataStudio" width="50" height="50">|DataStudio (Google)|Ferramenta de visualização de dados que permite criar relatórios interativos e painéis informativos usando várias fontes de dados.Facilita a criação de gráficos e dashboards personalizados para análise e tomada de decisões.|
 
 ### Arquitetura dos dados
-<img src="./Infra/Arquitetura_Dados.gif" alt="Aqt" width="500" height="200">
+<img src="./Infra/Arquitetura_Dados.gif" alt="Aqt" width="1200" height="600">
 
 ![](./Infra/Arquitetura_Dados.gif)
 
