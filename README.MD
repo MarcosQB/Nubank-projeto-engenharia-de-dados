@@ -40,7 +40,7 @@ O armazenamento dos dados em formato Parquet possibilita a comparação entre di
 ## Scripts
 >[Extraindo os dados da Nubank via API](./Scripts/Extraindo_dados_Nubank_API.ipynb)
 
->[Limpando e transformando os dados](./Scripts/Extraindo_dados_Nubank_API.ipynb)
+>[Limpando e transformando os dados](./Scripts/Transformando_os_dados.ipynb)
 
 >[Coletando os dados do Athena e enviando para o Google Sheets](./Scripts/Coletando_dados_Athena_enviando_Google_Sheets.ipynb)
 
