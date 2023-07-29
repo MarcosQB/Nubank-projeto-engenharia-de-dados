@@ -10,7 +10,7 @@
 
 | Icon| Serviços | Descrição |
 |------|----------|-----------|
-|<img src="./docs/Icons/Athena.png" alt="Athena" width="50" height="50">| Athena (AWS)|Serviço de análise interativo e sem servidor que oferece suporte a formatos de tabela e arquivo abertos. Permite aos usuários realizar consultas SQL em grandes conjuntos de dados armazenados no Amazon S3, sem a necessidade de gerenciar infraestrutura de banco de dados|
+|<img src="./docs/Icons/Athena.png" alt="Athena" width="70" height="70">| Athena (AWS)|Serviço de análise interativo e sem servidor que oferece suporte a formatos de tabela e arquivo abertos. Permite aos usuários realizar consultas SQL em grandes conjuntos de dados armazenados no Amazon S3, sem a necessidade de gerenciar infraestrutura de banco de dados|
 |<img src="./docs/Icons/ElasticMapReduce.png" alt="Athena" width="50" height="50"> | EMR (AWS)|            |
 |<img src="./docs/Icons/Glue Crawler.png" alt="Athena" width="50" height="50"> |Glue Crawlers (AWS)|            |
 |<img src="./docs/Icons/Glue Data Catalog.png" alt="Athena" width="50" height="50"> |Glue Data Catalog (AWS)|            |
