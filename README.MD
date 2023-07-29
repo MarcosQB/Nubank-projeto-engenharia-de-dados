@@ -36,7 +36,17 @@ Com os insights detalhados obtidos a partir da análise dos dados, posso tomar d
 
 - **Comparação de Períodos:** 
 O armazenamento dos dados em formato Parquet possibilita a comparação entre diferentes períodos de tempo, permitindo identificar tendências e mudanças no comportamento financeiro ao longo do tempo.
-
+#### Dependências
+```shell
+urllib3==1.26.6
+cryptography==38.0.2
+s3fs
+boto3
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pynubank
+```
 ### Serviços utilizados
 
 | Icon| Serviços | Descrição |
@@ -54,20 +64,12 @@ O armazenamento dos dados em formato Parquet possibilita a comparação entre di
 |<img src="./docs/Icons/Google Sheets.png" alt="Sheets" width="50" height="50">|Google Sheets (Google)|Planilha online oferecida pelo Google, permite criar, editar e compartilhar planilhas com outras pessoas em tempo real, facilitando a colaboração e organização de dados.|
 |<img src="./docs/Icons/DataStudio.png" alt="DataStudio" width="50" height="50">|DataStudio (Google)|Ferramenta de visualização de dados que permite criar relatórios interativos e painéis informativos usando várias fontes de dados.Facilita a criação de gráficos e dashboards personalizados para análise e tomada de decisões.|
 
-#### Dependências
-```shell
-urllib3==1.26.6
-cryptography==38.0.2
-s3fs
-boto3
-google-api-python-client
-google-auth-httplib2
-google-auth-oauthlib
-pynubank
-```
+### Arquitetura dos dados
+<img src="./Infra/Arquitetura_Dados.gif" alt="Aqt" width="500" height="200">
 
-## Dashboard
+![](./Infra/Arquitetura_Dados.gif)
+
+### Dashboard Construido
 ![](./Dashboard/Layout.jpg)
 
-## Arquitetura
-![](./Infra/Arquitetura_Dados.gif)
+
