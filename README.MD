@@ -1,5 +1,6 @@
 # Nubank
-
+> ###### Autor: Marcos Alexandre
+> ###### Data: Julho 29, 2023
 ## Introdução
 
 ## Dependências
@@ -10,7 +11,7 @@
 
 | Icon| Serviços | Descrição |
 |------|----------|-----------|
-|<img src="./docs/Icons/Athena.png" alt="Athena" width="50" height="50">| Athena (AWS)|Serviço de análise interativo e sem servidor que oferece suporte a formatos de tabela e arquivo abertos. Permite aos usuários realizar consultas SQL em grandes conjuntos de dados armazenados no Amazon S3, sem a necessidade de gerenciar infraestrutura de banco de dados.|
+|<img src="./docs/Icons/Athena.png" alt="Athena" width="50" height="50">| Athena (AWS)|Serviço de análise interativo e sem servidor que oferece suporte a formatos de tabela e arquivo abertos. Permite aos usuários realizar consultas SQL em grandes conjuntos de dados armazenados no Amazon S3, sem a necessidade   de gerenciar infraestrutura de banco de dados.|
 |<img src="./docs/Icons/ElasticMapReduce.png" alt="EMR" width="50" height="50"> | ElasticMapReduce (AWS)|Serviço de big data que permite processar e analisar grandes volumes de dados usando estruturas de processamento distribuído, como Apache Hadoop e Apache Spark.|
 |<img src="./docs/Icons/Glue Crawler.png" alt="Crawler" width="50" height="50"> |Glue Crawlers (AWS)|Serviço de descoberta de dados que automatiza o processo de extrair metadados de várias fontes de dados, como bancos de dados, Data Lakes e tabelas no Amazon S3. Ele facilita o rastreamento e a organização dos dados para análise e consulta.|
 |<img src="./docs/Icons/Glue Data Catalog.png" alt="DataCatalog" width="50" height="50"> |Glue Data Catalog (AWS)|Serviço que armazena informações estruturais e de esquema para os dados processados pelo AWS Glue. Ele permite que os dados sejam compartilhados entre diferentes serviços, facilitando a integração e o acesso aos dados.|
