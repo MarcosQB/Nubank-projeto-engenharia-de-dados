@@ -37,6 +37,16 @@ Com os insights detalhados obtidos a partir da análise dos dados, posso tomar d
 - **Comparação de Períodos:** 
 O armazenamento dos dados em formato Parquet possibilita a comparação entre diferentes períodos de tempo, permitindo identificar tendências e mudanças no comportamento financeiro ao longo do tempo.
 
+## Dashboard
+- <a href="https://lookerstudio.google.com/reporting/10caac1c-251e-4a69-92ba-cd85e57aa33c" target="_blank">Visualizar no DataStudio</a>
+
+![](./docs/Imgs/Relatório_Nubank_Dados_Ficticios.jpg)
+
+## Arquitetura dos dados
+![](./Infra/Arquitetura_Dados.gif)
+
+- [Detalhe sobre os serviços utilizados](./Infra/README.MD)
+
 ## Scripts
 >[Extraindo os dados da Nubank via API](./Scripts/Extraindo_dados_Nubank_API.ipynb)
 
@@ -45,18 +55,5 @@ O armazenamento dos dados em formato Parquet possibilita a comparação entre di
 >[Coletando os dados do Athena e enviando para o Google Sheets](./Scripts/Coletando_dados_Athena_enviando_Google_Sheets.ipynb)
 
 - [Detalhes sobre as depêndencias](./Scripts/README.MD)
-
-## Arquitetura dos dados
-![](./Infra/Arquitetura_Dados.gif)
-
-- [Detalhe sobre os serviços utilizados](./Infra/README.MD)
-
-## Dashboard Construido
-- <a href="https://lookerstudio.google.com/reporting/10caac1c-251e-4a69-92ba-cd85e57aa33c" target="_blank">Visualizar no DataStudio</a>
-
-
-
-
-![](./docs/Imgs/Relatório_Nubank_Dados_Ficticios.jpg)
 
 
