@@ -44,15 +44,15 @@ O armazenamento dos dados em formato Parquet possibilita a comparação entre di
 
 >[Coletando os dados do Athena e enviando para o Google Sheets](./Scripts/Coletando_dados_Athena_enviando_Google_Sheets.ipynb)
 
->[Detalhes sobre as depêndencias](./Scripts/README.MD)
+- [Detalhes sobre as depêndencias](./Scripts/README.MD)
 
 ## Arquitetura dos dados
-<img src="./Infra/Arquitetura_Dados.gif" alt="Aqt" width="1200" height="500">
+![](./Infra/Arquitetura_Dados.gif)
 
->[Detalhe sobre os serviços utilizados](./Scripts/Coletando_dados_Athena_enviando_Google_Sheets.ipynb)
+- [Detalhe sobre os serviços utilizados](./Scripts/Coletando_dados_Athena_enviando_Google_Sheets.ipynb)
 
 ## Dashboard Construido
->[Visualizar no DataStudio](https://lookerstudio.google.com/reporting/10caac1c-251e-4a69-92ba-cd85e57aa33c)
+- [Visualizar no DataStudio](https://lookerstudio.google.com/reporting/10caac1c-251e-4a69-92ba-cd85e57aa33c)
 
 ![](./docs/Imgs/Relatório_Nubank_Dados_Ficticios.jpg)
 
