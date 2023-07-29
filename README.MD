@@ -47,6 +47,13 @@ google-auth-httplib2
 google-auth-oauthlib
 pynubank
 ```
+## Scrips
+>[Extraindo os dados da Nubank via API](./Scripts/Extraindo_dados_Nubank_API.ipynb)
+
+>[Limpando e transformando os dados](./Scripts/Extraindo_dados_Nubank_API.ipynb)
+
+>[Coletando os dados do Athena e enviando para o Google Sheets](./Scripts/Coletando_dados_Athena_enviando_Google_Sheets.ipynb)
+
 ## Arquitetura dos dados
 <img src="./Infra/Arquitetura_Dados.gif" alt="Aqt" width="1200" height="500">
 
