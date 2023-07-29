@@ -49,7 +49,7 @@ O armazenamento dos dados em formato Parquet possibilita a comparação entre di
 ## Arquitetura dos dados
 ![](./Infra/Arquitetura_Dados.gif)
 
-- [Detalhe sobre os serviços utilizados](./Scripts/Coletando_dados_Athena_enviando_Google_Sheets.ipynb)
+- [Detalhe sobre os serviços utilizados](./Infra/README.MD)
 
 ## Dashboard Construido
 - <a href="https://lookerstudio.google.com/reporting/10caac1c-251e-4a69-92ba-cd85e57aa33c" target="_blank">Visualizar no DataStudio</a>
