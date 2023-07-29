@@ -2,10 +2,46 @@
 > ###### Autor: Marcos Alexandre
 > ###### Data: Julho 29, 2023
 ## Introdução
+Este projeto tem como objetivo automatizar a coleta, análise e visualização dos dados da conta Nubank por meio de uma arquitetura de engenharia de dados provisionada na nuvem AWS (Amazon Web Services). A solução oferece uma visão detalhada das transações, despesas, receitas, saldo da conta e limites de crédito, permitindo um gerenciamento financeiro mais eficiente e consciente.
+### Dependências
+```shell
+urllib3==1.26.6
+cryptography==38.0.2
+s3fs
+boto3
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pynubank
+```
+### Funcionalidades Principais:
 
-## Dependências
+1. **Coleta de Dados da Conta do Nubank:** Através de uma integração com a API do Nubank, os dados financeiros, incluindo transações, saldo da conta, limites de crédito e movimentações, são coletados de forma automatizada e segura.
 
-## Pré-requisitos
+2. **Armazenamento na Nuvem AWS:** Os dados coletados são armazenados no serviço de armazenamento S3 da AWS, garantindo a segurança, escalabilidade e disponibilidade necessárias para o projeto.
+
+3. **Pré-processamento e Limpeza de Dados:** Utilizando o PySpark, o projeto realiza transformações nos dados coletados, garantindo que eles estejam formatados corretamente para a análise.
+
+4. **Análise e Classificação de Transações:** O projeto categoriza as transações de acordo com seus tipos, como compras, parcelamentos e receitas. Isso permite uma análise detalhada do uso do cartão de crédito ao longo do mês.
+
+5. **Geração de Tabelas e Relatórios:** Os dados processados são organizados em tabelas e salvas no formato Parquet. Essas tabelas podem ser utilizadas para gerar relatórios detalhados sobre as despesas, receitas, saldo e limites de crédito.
+
+6. **Integração com o Google Sheets e Data Studio:** Os dados são enviados para o Google Sheets e o Data Studio para uma visualização interativa e personalizada dos insights obtidos. Isso permite um acompanhamento mais dinâmico e uma melhor compreensão da gestão financeira.
+
+7. **Notificações por E-mail:** O projeto envia notificações via e-mail para informar o início e conclusão do processamento dos dados, mantendo o usuário informado sobre o status do fluxo de trabalho.
+
+### Benefícios:
+
+- **Automatização Financeira:** A automatização da coleta e análise de dados permite que o usuário tenha uma visão completa e atualizada de suas finanças, eliminando a necessidade de acompanhamento manual e trabalhoso.
+
+- **Melhoria na Gestão Financeira:** Com os insights detalhados obtidos a partir da análise dos dados, o usuário pode tomar decisões financeiras mais conscientes, otimizando seus gastos e aumentando o controle sobre suas finanças.
+
+- **Comparação de Períodos:** O armazenamento dos dados em formato Parquet possibilita a comparação entre diferentes períodos de tempo, permitindo identificar tendências e mudanças no comportamento financeiro ao longo do tempo.
+
+- **Privacidade e Segurança:** As credenciais da API do Nubank são armazenadas com segurança no AWS SecretsManager, garantindo a privacidade e controle de acesso aos dados.
+
+- **Escalabilidade e Flexibilidade:** A arquitetura na nuvem AWS permite escalabilidade para processar grandes volumes de dados e flexibilidade para adicionar novas funcionalidades e fontes de dados.
+
 
 ## Serviços e Recursos
 
