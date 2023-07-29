@@ -1,49 +1,43 @@
 # Nubank
 > ###### Autor: Marcos Alexandre
 > ###### Data: Julho 29, 2023
-## Introdução
+### Descrição
 Este projeto tem como objetivo automatizar a coleta, análise e visualização dos dados da conta Nubank por meio de uma arquitetura de engenharia de dados provisionada na nuvem AWS (Amazon Web Services). A solução oferece uma visão detalhada das transações, despesas, receitas, saldo da conta e limites de crédito, permitindo um gerenciamento financeiro mais eficiente e consciente.
-### Dependências
-```shell
-urllib3==1.26.6
-cryptography==38.0.2
-s3fs
-boto3
-google-api-python-client
-google-auth-httplib2
-google-auth-oauthlib
-pynubank
-```
-### Funcionalidades Principais:
 
-1. **Coleta de Dados da Conta do Nubank:** Através de uma integração com a API do Nubank, os dados financeiros, incluindo transações, saldo da conta, limites de crédito e movimentações, são coletados de forma automatizada e segura.
+#### Fluxo do projeto:
 
-2. **Armazenamento na Nuvem AWS:** Os dados coletados são armazenados no serviço de armazenamento S3 da AWS, garantindo a segurança, escalabilidade e disponibilidade necessárias para o projeto.
+1. **Coleta de Dados da Conta do Nubank:** 
+Através de uma integração com a API do Nubank, os dados financeiros, incluindo transações, saldo da conta, limites de crédito e movimentações, são coletados de forma automatizada e segura.
+
+2. **Armazenamento na Nuvem AWS:** 
+Os dados coletados são armazenados no serviço de armazenamento S3 da AWS, garantindo a segurança, escalabilidade e disponibilidade necessárias para o projeto.    
 
 3. **Pré-processamento e Limpeza de Dados:** Utilizando o PySpark, o projeto realiza transformações nos dados coletados, garantindo que eles estejam formatados corretamente para a análise.
 
-4. **Análise e Classificação de Transações:** O projeto categoriza as transações de acordo com seus tipos, como compras, parcelamentos e receitas. Isso permite uma análise detalhada do uso do cartão de crédito ao longo do mês.
+4. **Análise e Classificação de Transações:**
+ O projeto categoriza as transações de acordo com seus tipos, como compras, parcelamentos e receitas. Isso permite uma análise detalhada do uso do cartão de crédito ao longo do mês.
 
-5. **Geração de Tabelas e Relatórios:** Os dados processados são organizados em tabelas e salvas no formato Parquet. Essas tabelas podem ser utilizadas para gerar relatórios detalhados sobre as despesas, receitas, saldo e limites de crédito.
+5. **Geração de Tabelas e Relatórios:** 
+Os dados processados são organizados em tabelas e salvas no formato Parquet. Essas tabelas podem ser utilizadas para gerar relatórios detalhados sobre as despesas, receitas, saldo e limites de crédito.
 
-6. **Integração com o Google Sheets e Data Studio:** Os dados são enviados para o Google Sheets e o Data Studio para uma visualização interativa e personalizada dos insights obtidos. Isso permite um acompanhamento mais dinâmico e uma melhor compreensão da gestão financeira.
+6. **Integração com o Google Sheets e Data Studio:** 
+Os dados são enviados para o Google Sheets e o Data Studio para uma visualização interativa e personalizada dos insights obtidos. Isso permite um acompanhamento mais dinâmico e uma melhor compreensão da gestão financeira.
 
-7. **Notificações por E-mail:** O projeto envia notificações via e-mail para informar o início e conclusão do processamento dos dados, mantendo o usuário informado sobre o status do fluxo de trabalho.
+7. **Notificações por E-mail:**
+ O projeto envia notificações via e-mail para informar o início e conclusão do processamento dos dados, me mantendo informado sobre o status do fluxo de processamento.
 
-### Benefícios:
+#### Benefícios do Projeto:
 
-- **Automatização Financeira:** A automatização da coleta e análise de dados permite que o usuário tenha uma visão completa e atualizada de suas finanças, eliminando a necessidade de acompanhamento manual e trabalhoso.
+- **Automatização Financeira:**
+ A automatização da coleta e análise de dados me permite ter uma visão completa e atualizada das minhas finanças, eliminando a necessidade de acompanhamento manual e trabalhoso.
 
-- **Melhoria na Gestão Financeira:** Com os insights detalhados obtidos a partir da análise dos dados, o usuário pode tomar decisões financeiras mais conscientes, otimizando seus gastos e aumentando o controle sobre suas finanças.
+- **Melhoria na Gestão Financeira:** 
+Com os insights detalhados obtidos a partir da análise dos dados, posso tomar decisões financeiras mais conscientes, otimizando meus gastos e aumentando o controle sobre minhas finanças.
 
-- **Comparação de Períodos:** O armazenamento dos dados em formato Parquet possibilita a comparação entre diferentes períodos de tempo, permitindo identificar tendências e mudanças no comportamento financeiro ao longo do tempo.
+- **Comparação de Períodos:** 
+O armazenamento dos dados em formato Parquet possibilita a comparação entre diferentes períodos de tempo, permitindo identificar tendências e mudanças no comportamento financeiro ao longo do tempo.
 
-- **Privacidade e Segurança:** As credenciais da API do Nubank são armazenadas com segurança no AWS SecretsManager, garantindo a privacidade e controle de acesso aos dados.
-
-- **Escalabilidade e Flexibilidade:** A arquitetura na nuvem AWS permite escalabilidade para processar grandes volumes de dados e flexibilidade para adicionar novas funcionalidades e fontes de dados.
-
-
-## Serviços e Recursos
+### Serviços utilizados
 
 | Icon| Serviços | Descrição |
 |------|----------|-----------|
@@ -59,6 +53,18 @@ pynubank
 |<img src="./docs/Icons/S3.png" alt="S3" width="50" height="50">|S3 (AWS)|Serviço de armazenamento de objetos altamente escalável e durável. Ele permite armazenar e recuperar qualquer quantidade de dados a qualquer momento, oferecendo alta disponibilidade e segurança avançada para os dados armazenados.|
 |<img src="./docs/Icons/Google Sheets.png" alt="Sheets" width="50" height="50">|Google Sheets (Google)|Planilha online oferecida pelo Google, permite criar, editar e compartilhar planilhas com outras pessoas em tempo real, facilitando a colaboração e organização de dados.|
 |<img src="./docs/Icons/DataStudio.png" alt="DataStudio" width="50" height="50">|DataStudio (Google)|Ferramenta de visualização de dados que permite criar relatórios interativos e painéis informativos usando várias fontes de dados.Facilita a criação de gráficos e dashboards personalizados para análise e tomada de decisões.|
+
+#### Dependências
+```shell
+urllib3==1.26.6
+cryptography==38.0.2
+s3fs
+boto3
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pynubank
+```
 
 ## Dashboard
 ![](./Dashboard/Layout.jpg)
